@@ -7,6 +7,7 @@ from django.views.generic.list import ListView
 
 from .models import Cheese
 
+
 def home(request):
     """A sample function-based view"""
     context = {}
@@ -16,15 +17,18 @@ def home(request):
 
     return render_to_response('index.html', context)
 
+
 class CheeseListView(ListView):
     """Shows users a list of cheeses"""
 
     model = Cheese
 
+
 class CheeseDetailView(DetailView):
     """Shows users a single cheese"""
 
     model = Cheese
+
 
 class CheeseCreateView(SuccessMessageMixin, CreateView):
     """Powers a form to create a new cheese"""

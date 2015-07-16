@@ -1,6 +1,7 @@
 from django.core.urlresolvers import reverse
 from django.db import models
 
+
 class Cheese(models.Model):
     """A type of cheese in the Curd Shop inventory"""
 

@@ -1,6 +1,10 @@
 from django.conf.urls import url
 
-from .views import CheeseListView, CheeseDetailView, CheeseCreateView, CheeseUpdateView, CheeseDeleteView
+from .views import CheeseListView
+from .views import CheeseDetailView
+from .views import CheeseCreateView
+from .views import CheeseUpdateView
+from .views import CheeseDeleteView
 
 
 urlpatterns = [
@@ -10,6 +14,10 @@ urlpatterns = [
 
     # # Create, update, delete
     url(r'^/new$', CheeseCreateView.as_view(), name='new_cheese'),
-    url(r'^/(?P<pk>[0-9]+)/edit$', CheeseUpdateView.as_view(), name='edit_cheese'),
-    url(r'^/(?P<pk>[0-9]+)/delete$', CheeseDeleteView.as_view(), name='delete_cheese'),
+    url(r'^/(?P<pk>[0-9]+)/edit$',
+        CheeseUpdateView.as_view(),
+        name='edit_cheese'),
+    url(r'^/(?P<pk>[0-9]+)/delete$',
+        CheeseDeleteView.as_view(),
+        name='delete_cheese'),
 ]
