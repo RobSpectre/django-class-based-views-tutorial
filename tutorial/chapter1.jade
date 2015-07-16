@@ -2,9 +2,8 @@
   :markdown
     ## Django class-based views: threat or menace?
 
-    *Author's note: I maybe played around too much with some of these step titles. I would probably not be so cheeky for something on Twilio.com... probably.*
-
-    In March 2011, as part of a relatively standard minor release, the Django project officially incorporated its most controversial feature ever: [class-based views](https://docs.djangoproject.com/en/1.8/releases/1.3/#class-based-views).
+    In March 2011, as part of a minor release, the Django project incorporated
+    its a very controversial feature: [class-based views](https://docs.djangoproject.com/en/1.8/releases/1.3/#class-based-views).
 
     Devised as a tool to help developers avoid writing boilerplate [Create, Read, Update, and Delete](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) view logic, class-based views came under fire as a violation of Python's second most important tenet:
 
@@ -15,9 +14,9 @@
     | Explicit is better than implicit.
 
   :markdown
-    While class-based views can greatly reduce the lines of code a developer needs to implement some basic web application features, critics of class-based views say that the cognitive overhead and "magic" of CBVs negate any benefits they provide.
+    While class-based views can greatly reduce the lines of code needed to implement some basic web application features, critics of class-based views say that the cognitive overhead and "magic" of CBVs negate any benefits they provide.
 
-    To see this firsthand, let do a quick comparison of a function-based view and a class-based view.
+    To see this firsthand, let's do a quick comparison of a function-based view and a class-based view.
 
 .step(data-title='A function-based view', data-file='inventory/views.py', data-highlight='10-17')
   :markdown
@@ -37,7 +36,7 @@
   :markdown
     ## Rendering a template in one line
 
-    Class-based views actually make straight template rendering pretty easy.
+    Class-based views make template rendering pretty easy.
 
     We can do it in one line in our URL configuration using Django's [TemplateView](https://docs.djangoproject.com/en/1.8/ref/class-based-views/base/#django.views.generic.base.TemplateView).
 

@@ -5,7 +5,7 @@
   p(style="text-align: right") - Pablo Picasso
   
   :markdown
-    When we looked at ListView and DetailView, we got a taste for the drawbacks of using class-based views. They seemed like a lot of "magic" just to save a few lines of view code.
+    When we looked at ListView and DetailView, we got a taste for the drawbacks of using class-based views. They seemed like a lot of magic just to save a few lines of view code.
 
     [CreateView](https://docs.djangoproject.com/en/1.8/ref/class-based-views/generic-editing/#createview) has even more magic, but it also saves you a lot of form processing boilerplate code that developers hate to write.
 
@@ -28,9 +28,10 @@
 
     **Mixins**
 
-    We  gave both views a little extra kick by having them inherit from the [SuccessMessageMixin](https://docs.djangoproject.com/en/1.8/ref/contrib/messages/) class. 
+    We gave both views a little extra kick by having them inherit from the [SuccessMessageMixin](https://docs.djangoproject.com/en/1.8/ref/contrib/messages/) class. 
 
-    This handy class will use the value of our view class's `success_message` property with Django's messaging framework, giving us a nice way confirm with users that the creation was successful.
+    This handy class will use the value of our view class's `success_message`
+    property with Django's messaging framework, giving us an easy way to confirm with users that the creation was successful.
 
     Mixins make class-based views better by helping them do a little extra work. Though writing your own involves diving deeper into the class-based views API, the [django-braces](http://django-braces.readthedocs.org/en/latest/index.html) library offers some handy mixins that may do what you need already.
 
